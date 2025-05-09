@@ -1,8 +1,6 @@
 import express from 'express';
 
 const app = express();
-const port = 3000;
-
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
@@ -29,6 +27,6 @@ app.post('/echo', (req, res) => {
     res.json({ received: data });
 });
 
-app.listen(port, () => {
-    console.log(`Server listening at http://localhost:${port}`);
+app.listen(3000, '0.0.0.0', () => {
+  console.log("Server listening at http://0.0.0.0:3000");
 });
